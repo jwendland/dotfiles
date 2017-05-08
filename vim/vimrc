@@ -17,7 +17,7 @@ endif
 " use Vundle to install external plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -27,9 +27,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'vim-scripts/argtextobj.vim'
+Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
-
-source ~/.vim/osc52.vim
 
 " Some vars.
 let g:airline_powerline_fonts = 1
