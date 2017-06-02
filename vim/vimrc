@@ -60,7 +60,7 @@ set mouse=a
 " show special character
 set list
 " remap special characters to something more fancy
-set listchars=tab:▸\ ,extends:»,nbsp:·,trail:·
+set listchars=tab:»\ ,extends:»,nbsp:·,trail:·
 " use both * and + registers for yanks
 set clipboard=unnamed,unnamedplus
 " match also < and >
@@ -80,4 +80,4 @@ highlight trailingWhitespace ctermbg=red
 highlight TabLine ctermfg=DarkGrey ctermbg=Black cterm=NONE
 highlight TabLineFill ctermfg=DarkGrey ctermbg=Black cterm=NONE
 highlight TabLineSel ctermfg=White ctermbg=DarkYellow cterm=NONE
-highlight SpecialKey ctermfg=DarkBlue ctermbg=NONE cterm=NONE
+highlight SpecialKey ctermfg=DarkGrey ctermbg=NONE cterm=NONE
