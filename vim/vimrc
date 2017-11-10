@@ -67,6 +67,9 @@ set clipboard=unnamed,unnamedplus
 set matchpairs+=<:>
 " always show 5 lines of context when scrolling
 set scrolloff=5
+" make filename tab completion more shell like
+set wildmode=longest,list,full
+set wildmenu
 
 " syntax highlighting
 syntax on
