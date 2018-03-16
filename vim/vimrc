@@ -37,6 +37,11 @@ let g:tmux_navigator_save_on_switch = 2
 
 " run gofmt when saving go source
 autocmd FileType go AutoFormatBuffer gofmt
+function! GoColums()
+  let &l:colorcolumn=0
+endfunction
+autocmd FileType go call GoColums()
+
 
 filetype plugin indent on
 " show line and column number in status line
