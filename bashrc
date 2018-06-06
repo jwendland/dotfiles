@@ -102,3 +102,7 @@ function update-environment {
 if [ -d ~/bin ]; then
   export PATH=~/bin:$PATH
 fi
+
+if [ -d ~/go/bin ]; then
+  export PATH=~/go/bin:$PATH
+fi
