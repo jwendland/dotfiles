@@ -1,0 +1,11 @@
+#!/bin/bash
+
+BASEDIR=$(dirname $(readlink -f "$0"))
+
+
+for fname in bashrc bash_aliases vimrc; do
+  ln -sf "${BASEDIR}/${fname}" "${HOME}/.${fname}"
+done
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
