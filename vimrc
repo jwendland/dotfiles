@@ -40,6 +40,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'vim-scripts/argtextobj.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
 call vundle#end()
 
 " Some vars.
@@ -56,6 +58,10 @@ autocmd FileType go call GoColums()
 
 
 filetype plugin indent on
+" don't play annoying sounds on errors
+set noerrorbells
+set visualbell
+set t_vb=
 " show line and column number in status line
 set ruler
 " show the mode in status line
