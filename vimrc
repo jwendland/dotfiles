@@ -1,5 +1,18 @@
 " Automatic reloading of .vimrc
-autocmd! bufwritepost .vimrc source %
+if has('win32')
+  autocmd! bufwritepost _vimrc source %
+  set rtp+=$HOME\vimfiles\bundle\Vundle.vim
+else
+  autocmd! bufwritepost .vimrc source %
+  set rtp+=~/.vim/bundle/Vundle.vim
+endif
+
+if has('gui_running')
+  if has('gui_win32')
+    set guifont=Consolas:h12:cANSI
+  endif
+  set lines=80 columns=120
+endif
 
 " I'm using VIM
 set nocompatible
@@ -15,7 +28,6 @@ if filereadable(expand('~/.vim/google/vimrc'))
 endif
 
 " use Vundle to install external plugins
-set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -65,7 +77,11 @@ set mouse=a
 " show special character
 set list
 " remap special characters to something more fancy
-set listchars=tab:»\ ,extends:»,nbsp:·,trail:·
+if has('win32')
+  set listchars=tab:�\ ,extends:�,nbsp:�,trail:�
+else
+  set listchars=tab:»\ ,extends:»,nbsp:·,trail:·
+endif
 " use both * and + registers for yanks
 set clipboard=unnamed,unnamedplus
 " match also < and >
