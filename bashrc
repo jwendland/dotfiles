@@ -8,8 +8,8 @@ esac
 set -o vi
 
 # source Google specifics
-if [ -r ~/git/dotfiles-google/bashrc ]; then
-  source ~/git/dotfiles-google/bashrc
+if [ -r ~/.bashrc-google ]; then
+  source ~/.bashrc-google
 fi
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -70,8 +70,12 @@ fi
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-if [ -f ~/git/dotfiles/bash_aliases ]; then
-    . ~/git/dotfiles/bash_aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_aliases-google ]; then
+    . ~/.bash_aliases-google
 fi
 
 # enable programmable completion features (you don't need to enable
